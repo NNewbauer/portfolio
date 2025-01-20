@@ -1,0 +1,93 @@
+body, html {
+    font-family: 'Inter', sans-serif; /* Clean and modern typography */
+    color: #333;
+    background-color: #272727;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin: 0;
+    color: #111;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #007bff;
+    transition: color 0.3s ease;
+  }
+  
+  a:hover {
+    color: #0056b3;
+  }
+
+div {
+    text-align: center;
+    padding: 50px;
+}
+
+p {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+.section {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  color: white;
+  position: relative;
+}
+
+.musician {
+  background: url("pictures/musician.png") no-repeat center center/cover;
+}
+
+.security-guard {
+  background: url("pictures/security.jpg") no-repeat center center/cover;
+}
+
+.uncle {
+  background: url("pictures/uncle.JPG") no-repeat center center/cover;
+}
+
+.cat-dad {
+  background: url("pictures/catdad.png") no-repeat center center/cover;
+}
+
+.content {
+  z-index: 10; /* Ensure it's above the background */
+  opacity: 1; /* Ensure text is visible */
+  transform: translateY(0); /* Reset any animation issues */
+  background: rgba(0, 0, 0, 0.6); /* Add contrast for visibility */
+  padding: 20px;
+  border-radius: 10px;
+}
+
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  color: white;
+}
+
+p {
+  font-size: 1.5rem;
+  color: white;
+}
