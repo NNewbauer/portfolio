@@ -17,7 +17,6 @@ function Portfolio() {
 
     return (
         <div>
-            <h1>{greeting}</h1>
             <p>Welcome to Nicholas Newbauer's Portfolio!</p>
         </div>
     );

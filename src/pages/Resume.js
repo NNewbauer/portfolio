@@ -17,7 +17,6 @@ function Resume() {
 
     return (
         <div>
-            <h1>{greeting}</h1>
             <p>Welcome to Nicholas Newbauer's Resume!</p>
         </div>
     );
