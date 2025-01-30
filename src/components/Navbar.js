@@ -1,23 +1,23 @@
-import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import './navbar.css';
+import React, { useContext, useEffect, useState } from "react";
+import { NavigationContext } from "./PageTransition"; // Import context
+import "./navbar.css";
 
 function Navbar() {
+    const { handleNavigation } = useContext(NavigationContext); // Get function from context
+    const [greeting, setGreeting] = useState("");
 
-    const [greeting, setGreeting] = useState('');
-
-    useEffect(() => {    
+    useEffect(() => {
         const hour = new Date().getHours();
         setGreeting(hour < 12 ? "Good Morning" : hour < 18 ? "Good Afternoon" : "Good Evening");
-    }
-    , []);
+    }, []);
+
     return (
         <nav className="navbar">
             <h1>{greeting}</h1>
             <ul className="navbar-links">
-                <li><Link to="/">Home</Link></li>
-                <li><Link to="/resume">Resume</Link></li>
-                <li><Link to="/portfolio">Projects</Link></li>
+                <li><span onClick={() => handleNavigation("/")}>Home</span></li>
+                <li><span onClick={() => handleNavigation("/resume")}>Resume</span></li>
+                <li><span onClick={() => handleNavigation("/portfolio")}>Projects</span></li>
             </ul>
         </nav>
     );

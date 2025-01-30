@@ -2,22 +2,42 @@
 
 body, html {
   margin: 0;
-  padding: 0;
+  padding: 0px;
   font-family: 'Slabo 13px', serif;
   font-weight: 400;
   font-style: normal;
   font-size: larger;
-  background-color: #272727;
-  color: #fff;
+  background: #282f33e7
+    radial-gradient(rgba(115, 113, 113, 0.712) 10%, transparent 1%);
+  background-size: 11px 11px;
   overflow-x: hidden; /* Prevent horizontal scroll caused by animation */
+  cursor: none;
+
 }
 
-body, html {
-  margin: 0;
-  padding: 0;
-  background-color: #272727;
-  color: #fff;
-  overflow-x: hidden; /* Prevent horizontal scroll caused by animation */
+.mouse-glow {
+  position: fixed;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 1);
+  filter: blur(.5px);
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: transform 0.05s linear;
+  z-index: 9999;
+}
+
+.mouse-trail {
+  position: fixed;
+  width: 15px; /* Wide near cursor */
+  height: 15px;  /* Thin but visible */
+  border-radius: 50%;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0));
+  filter: blur(2px); /* Soft glow */
+  pointer-events: none;
+  transition: transform 0.1s ease-out, opacity 0.2s ease-out;
+  z-index: 9998;
 }
 
 .home {
@@ -26,13 +46,15 @@ body, html {
 }
 
 .section {
-  height: 80vh; /* Full screen height for each section */
+  height: 80vh;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 20px;
+  padding: 40px; /* Adds spacing around sections */
   box-sizing: border-box;
+  max-width: 1200px; /* Prevents content from stretching too wide */
+  margin: auto; /* Centers the section */
 }
 
 .content {
@@ -68,8 +90,8 @@ body, html {
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 50px 20px;
-  background-color: #333;
+  padding: 0px 0px;
+  background-color: #00000030;
   color: #fff;
 }
 
@@ -103,12 +125,121 @@ body, html {
 }
 
 .welcome-section img.headshot:hover {
+  cursor: none;
   transform: scale(1.1); /* Zoom in */
   box-shadow: 0 8px 12px rgba(0, 0, 0, 0.4); /* Enhance shadow on hover */
-  cursor: pointer;
+}
+
+.welcome-section span.headshot:hover {
+  cursor: none;
+  transform: scale(1.1); /* Zoom in */
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.4); /* Enhance shadow on hover */
 }
 
 .spacer {
-  height: 20vh; /* Adjust height as needed */
+  height: 5vh; /* Adjust height as needed */
   background-color: transparent; /* No background color */
+}
+
+.minispacer {
+  height: 2vh; /* Adjust height as needed */
+  background-color: transparent; /* No background color */
+}
+
+.split-section {
+  display: flex; /* Enables side-by-side layout */
+  justify-content: space-between; /* Ensures equal spacing */
+  align-items:first baseline; /* Aligns content vertically */
+  height: 5%; /* Adjust height as needed */
+  padding: 0px;
+}
+
+.left, .right {
+  width: 50%; /* Each takes half of the section */
+  padding: 40px;
+  box-sizing: border-box;
+}
+
+.left {
+  color: white;
+}
+
+.right {
+  color: white;
+}
+
+.tech-icons-container {
+  display:grid;
+  grid: 100px / repeat(auto-fill, minmax(100px, 1fr));
+  gap: 20px;
+  justify-content: space-around;
+  align-items:first baseline;
+  padding: 20px;
+}
+
+.tech-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 2rem;
+  transition: transform 0.2s ease-in-out;
+}
+
+.tech-icon i {
+  font-size: 4rem;
+}
+
+.tech-icon p {
+  margin-top: 5px;
+  font-size: 1rem;
+  color: #ccc;
+}
+
+.tech-icon:hover {
+  transform: scale(1.2);
+}
+
+.dropdown {
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+
+.dropdown-toggle {
+  background-color: transparent;
+  color: white;
+  border: none;
+  font-size: 2rem; /* Match welcome-section h3 */
+  font-family: 'Slabo 13px', serif;
+  margin: 20px 0 5px;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+  font-weight: bold;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.dropdown-toggle:hover {
+  cursor: none;
+  color: #fca311;
+  transform: translateX(5px); /* Slight slide effect */
+}
+
+/* Hidden content, smooth slide-down effect */
+.dropdown-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease-in-out, opacity 0.4s ease-in-out;
+  background-color: #1e1e1e5e;
+  color: white;
+  border: 1px solid #444;
+  border-radius: 5px;
+  padding: 0 10px;
+  opacity: 0;
+}
+
+/* When dropdown is open, smoothly expand */
+.dropdown.open .dropdown-content {
+  max-height: 300px; /* Adjust based on content */
+  opacity: 1;
+  padding: 10px;
 }
