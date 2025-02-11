@@ -48,7 +48,7 @@ function Home() {
                     </Dropdown>
                     <hr></hr>
 
-                    <Dropdown title="Projects:">
+                    <Dropdown title="Current Projects:">
                         <h3><u>Mouser</u></h3>
                         <p>Mouser is a mouse testing database that I am working on for the <b>SLU Virology Lab</b>. It is designed to allow researchers to easily track and manage the mice in their experiments.</p>
                         <p><u>Accomplishments</u>:</p>

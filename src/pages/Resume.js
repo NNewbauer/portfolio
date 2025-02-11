@@ -17,7 +17,22 @@ function Resume() {
 
     return (
         <div>
-            <p>Welcome to Nicholas Newbauer's Resume!</p>
+            <div className='welcome-section'>
+                <div className='spacer'></div>
+                <h1>Resume</h1>
+                <div className='spacer'></div>
+            </div>
+            <div className='spacer'></div>
+            <div className='resume'>
+                <h2>Education</h2>
+                <h3>School: Saint Louis University</h3>
+                <div className="education-flex">
+                    <p className='box'>Major: Computer Science</p>
+                    <p className='box'>Minor: Mathematics</p>
+                </div>
+                <p>Current GPA: 3.57</p>
+            </div>
+            <div className='spacer'></div>
         </div>
     );
 }
