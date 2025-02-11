@@ -2,6 +2,7 @@
   "name": "portfolio_site",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://nnewbauer.github.io/portfolio/",
   "dependencies": {
     "cra-template": "1.2.0",
     "gsap": "^3.12.7",
@@ -11,8 +12,7 @@
     "react-router-dom": "^7.1.1",
     "react-scripts": "5.0.1",
     "swiper": "^11.2.1",
-    "web-vitals": "^4.2.4",
-    "homepage": "https://nnewbauer.github.io/portfolio/"
+    "web-vitals": "^4.2.4"
   },
   "scripts": {
     "start": "react-scripts start",
