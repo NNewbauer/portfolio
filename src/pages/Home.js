@@ -27,7 +27,7 @@ function Home() {
             <div class="split-section">
                 <div class="left">
 
-                    <Dropdown title="As a Developer:">
+                    <Dropdown title="As a Developer:" defaultOpen={true}>
                         <p>I'm a Software Developer with extensive experience in Full-Stack Development.</p>
                         <p>Greatest Skill & Interests:</p>
                         <ul>

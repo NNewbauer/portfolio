@@ -1,8 +1,8 @@
 import React, { useState, useRef, useEffect } from "react";
 import "../styles.css"; // Ensure CSS is imported
 
-const Dropdown = ({ title, children }) => {
-    const [isOpen, setIsOpen] = useState(false);
+const Dropdown = ({ title, children, defaultOpen = false }) => {
+    const [isOpen, setIsOpen] = useState(defaultOpen);
     const contentRef = useRef(null); // To dynamically adjust max-height
 
     useEffect(() => {
