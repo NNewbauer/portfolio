@@ -6,7 +6,7 @@ import head from "../pictures/head.png";
 import catDad from "../pictures/catdad.jpg";
 import musician from "../pictures/musician.png";
 import securityGuard from "../pictures/security.jpg";
-import uncle from "../pictures/uncle.jpg";
+import uncle from "../pictures/uncle.JPG";
 
 gsap.registerPlugin(ScrollTrigger);
 

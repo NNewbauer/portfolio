@@ -8,7 +8,6 @@ import Nick from './pages/Nick';
 import Navbar from './components/Navbar';
 import MouseTracker from "./components/MouseTracker";
 import { NavigationProvider } from "./components/PageTransition";
-import { Navigation } from 'swiper/modules';
 
 function App() {
   return (

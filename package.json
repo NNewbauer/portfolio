@@ -2,7 +2,7 @@
   "name": "portfolio_site",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://nnewbauer.github.io/portfolio/",
+  "homepage": "https://nbnewbauer.com/",
   "dependencies": {
     "cra-template": "1.2.0",
     "gsap": "^3.12.7",
